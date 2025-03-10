@@ -97,12 +97,12 @@ struct UserDetailView: View {
         }
     }
 
-#Preview {
-    do {
-        let user = User(id: UUID(), isActive: true, name: "Taylor", age: 19, company: "TalkShow", email: "t@ylor.com", address: "asda", about: "mmasdi asdjjsda pjsadpaoda sdaodkas jiean,anisn asmdaspodmmuinemiinsnfmouias aoisai", registered: Date.now, tags: ["Music", "Singer"], friends: [Friend(id: UUID(), name: "Bob Blank")])
-        
-        return UserDetailView(user: user)
-    } catch {
-        return Text("Not possible to load users")
-    }
-}
+//#Preview {
+//    do {
+//        let user = User(id: UUID(), isActive: true, name: "Taylor", age: 19, company: "TalkShow", email: "t@ylor.com", address: "asda", about: "mmasdi asdjjsda pjsadpaoda sdaodkas jiean,anisn asmdaspodmmuinemiinsnfmouias aoisai", registered: Date.now, tags: ["Music", "Singer"], friends: [Friend(id: UUID(), name: "Bob Blank")])
+//        
+//        return UserDetailView(user: user)
+//    } catch {
+//        return Text("Not possible to load users")
+//    }
+//}

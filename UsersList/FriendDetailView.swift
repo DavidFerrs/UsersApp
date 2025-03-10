@@ -24,6 +24,6 @@ struct FriendDetailView: View {
     }
 }
 
-#Preview {
-    FriendDetailView(friend: Friend(id: UUID(), name: "BObby bokks"))
-}
+//#Preview {
+//    FriendDetailView(friend: Friend(id: UUID(), name: "BObby bokks"))
+//}

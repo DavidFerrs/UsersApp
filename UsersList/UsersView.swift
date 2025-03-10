@@ -5,6 +5,7 @@
 //  Created by David Ferreira on 07/03/25.
 //
 
+import SwiftData
 import SwiftUI
 
 struct Response: Codable {
@@ -12,7 +13,8 @@ struct Response: Codable {
 }
 
 struct UsersView: View {
-    @State private var users = [User]()
+    @Environment(\.modelContext) var modelContext
+    @Query var users: [User]
     @State private var isLoading = false
     
     var body: some View {
@@ -49,11 +51,16 @@ struct UsersView: View {
     
     func loadUsers() async {
         isLoading = true
-        users = await fetchUsers()
+        let usersData = await fetchUsers()
+        
+        for user in usersData {
+            modelContext.insert(user)
+        }
+        
         isLoading = false
     }
 }
 
-#Preview {
-    UsersView()
-}
+//#Preview {
+//    UsersView()
+//}
